@@ -14,9 +14,9 @@ are explicitly noted.
 
 ## Unreleased
 
-### Added
+### Changed
 
-- (nothing)
+- Upgrade to org.clojure/tools.namespace "0.3.0-alpha4".
 
 ### Diffs
 

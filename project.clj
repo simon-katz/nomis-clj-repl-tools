@@ -5,6 +5,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0"]]
   :profiles {:dev {:source-paths ["dev"]
-                   :dependencies [[org.clojure/tools.namespace "0.2.11"]
+                   :dependencies [[org.clojure/tools.namespace "0.3.0-alpha4"]
                                   [midje "1.9.1"]]
                    :plugins [[lein-midje "3.2.1"]]}})
