@@ -12,6 +12,17 @@ initial development versions (that is 0.y.z versions)
 are explicitly noted.
 
 
+## Unreleased
+
+### Added
+
+- (nothing)
+
+### Diffs
+
+https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.0...HEAD
+
+
 ## 0.1.0 - 2018-04-29
 
 ### Added
