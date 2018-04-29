@@ -15,7 +15,8 @@
 (defn move-ns-tree
   "Use `clojure.tools.namespace.move` to move a namespace tree.
   `old-sym` is a namespace prefix such as `a.b.c`.
-  Move namespaces named `a.b.c.d1`, `a.b.c.d2`, `a.b.c.d3.e1`, `a.b.c.d3.e2` etc."
+  Move namespaces named `a.b.c.d1`, `a.b.c.d2`, `a.b.c.d3.e1`, `a.b.c.d3.e2` etc.
+  NB The namespaces must already be loaded."
   [old-sym new-sym source-path dirs]
   (doseq [ns-name (->> (all-ns)
                        (map ns-name)
