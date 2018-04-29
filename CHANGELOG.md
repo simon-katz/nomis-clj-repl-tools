@@ -32,7 +32,7 @@ https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.2...HEAD
 
 ### Diffs
 
-https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.0...HEAD
+https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.0...0.1.2
 
 
 ## 0.1.0 - 2018-04-29
