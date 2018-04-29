@@ -12,7 +12,7 @@ initial development versions (that is 0.y.z versions)
 are explicitly noted.
 
 
-## Unreleased
+## 0.1.2 - 2018-04-29
 
 ### Changed
 
