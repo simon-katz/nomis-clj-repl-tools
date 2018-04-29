@@ -6,5 +6,4 @@
              ]
             [clojure.tools.namespace.move :refer :all]
             [clojure.tools.namespace.repl :refer :all]
-            [midje.repl :refer :all]
-            [nomis-clj-repl-tools :refer :all]))
+            [midje.repl :refer :all]))
