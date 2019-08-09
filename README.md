@@ -39,7 +39,7 @@ arg of `["dev" "src" "test"]`.
 
 ## License
 
-Copyright © 2018 Simon Katz
+Copyright © 2018-2019 Simon Katz
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

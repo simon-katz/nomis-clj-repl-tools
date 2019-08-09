@@ -12,15 +12,15 @@ initial development versions (that is 0.y.z versions)
 are explicitly noted.
 
 
-## Unreleased
+## 0.1.3 - 2019-08-09
 
 ### Added
 
-- (nothing)
+- Catch and report exceptions when trying to move files.
 
 ### Diffs
 
-https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.2...HEAD
+https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.2...0.1.3
 
 
 

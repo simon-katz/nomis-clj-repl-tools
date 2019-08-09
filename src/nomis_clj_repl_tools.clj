@@ -27,11 +27,16 @@
                                               (name old-sym)
                                               (name new-sym))]
       (print "Moving" ns-name "to" new-ns-name "... ")
-      (ctnm/move-ns (symbol ns-name)
-                    (symbol new-ns-name)
-                    source-path
-                    dirs)
-      (println "Done"))))
+      (try (do (ctnm/move-ns (symbol ns-name)
+                             (symbol new-ns-name)
+                             source-path
+                             dirs)
+               (println "Done"))
+           (catch Exception
+               e
+             (println (format "\n    Warning: %s: %s"
+                              (.getName (type e))
+                              (.getMessage e))))))))
 
 ;;;; ___________________________________________________________________________
 ;;;; move-ns-dev-src-test
