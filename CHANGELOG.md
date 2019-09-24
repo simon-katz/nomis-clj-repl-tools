@@ -12,15 +12,16 @@ initial development versions (that is 0.y.z versions)
 are explicitly noted.
 
 
-## Unreleased
+## 0.1.4 - 2019-09-24
 
 ### Added
 
-- (nothing)
+- Move dependency on tools.namespace from dev profile to top level.
+- Upgrade dependencies.
 
 ### Diffs
 
-https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.3...HEAD
+https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.3...0.1.4
 
 
 ## 0.1.3 - 2019-08-09
