@@ -1,4 +1,4 @@
-(defproject nomis-clj-repl-tools "0.1.4"
+(defproject nomis-clj-repl-tools "0.1.5-SNAPSHOT"
   :description "Clojure REPL tools"
   :url "https://github.com/simon-katz/nomis-clj-repl-tools"
   :license {:name "Eclipse Public License"
