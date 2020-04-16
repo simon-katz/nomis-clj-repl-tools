@@ -34,8 +34,7 @@
   [old-sym new-sym source-path dirs]
   (doseq [ns-name (->> (ns-names)
                        (map name)
-                       (filter #(clojure.string/starts-with? %
-                                                             (name old-sym)))
+                       (filter #(.startsWith % (name old-sym)))
                        sort)]
     (let [new-ns-name (clojure.string/replace ns-name
                                               (name old-sym)
