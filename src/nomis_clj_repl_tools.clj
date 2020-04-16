@@ -10,14 +10,18 @@
              #":"))
 
 ;;;; ___________________________________________________________________________
+;;;; ns-names
+
+(defn ns-names
+  []
+  (map ns-name (all-ns)))
+
+;;;; ___________________________________________________________________________
 ;;;; ns-names-matching-re
 
 (defn ns-names-matching-re [re]
-  (->> (all-ns)
-       (map ns-name)
-       (map str)
-       (filter #(re-find re %))
-       sort))
+  (filter #(re-find re (name %))
+          (ns-names)))
 
 ;;;; ___________________________________________________________________________
 ;;;; move-ns-tree
@@ -28,11 +32,11 @@
   Move namespaces named `a.b.c.d1`, `a.b.c.d2`, `a.b.c.d3.e1`, `a.b.c.d3.e2` etc.
   NB The namespaces must already be loaded."
   [old-sym new-sym source-path dirs]
-  (doseq [ns-name (->> (all-ns)
-                       (map ns-name)
+  (doseq [ns-name (->> (ns-names)
                        (map name)
                        (filter #(clojure.string/starts-with? %
-                                                             (name old-sym))))]
+                                                             (name old-sym)))
+                       sort)]
     (let [new-ns-name (clojure.string/replace ns-name
                                               (name old-sym)
                                               (name new-sym))]

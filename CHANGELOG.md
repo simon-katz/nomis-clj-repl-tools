@@ -16,7 +16,8 @@ are explicitly noted.
 
 ### Added
 
-- Add `ns-names-matching-re`.
+- Add `ns-names` and `ns-names--no-sort`.
+- Add `ns-names-matching-re` and `ns-names-matching-re--no-sort`.
 - Upgrade to org.clojure/tools.namespace 1.0.0.
 
 ### Diffs
