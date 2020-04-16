@@ -16,7 +16,7 @@ are explicitly noted.
 
 ### Added
 
-- (nothing)
+- Add `ns-names-matching-re`.
 
 ### Diffs
 
