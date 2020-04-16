@@ -17,6 +17,7 @@ are explicitly noted.
 ### Added
 
 - Add `ns-names-matching-re`.
+- Upgrade to org.clojure/tools.namespace 1.0.0.
 
 ### Diffs
 
