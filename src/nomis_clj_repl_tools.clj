@@ -10,6 +10,16 @@
              #":"))
 
 ;;;; ___________________________________________________________________________
+;;;; ns-names-matching-re
+
+(defn ns-names-matching-re [re]
+  (->> (all-ns)
+       (map ns-name)
+       (map str)
+       (filter #(re-find re %))
+       sort))
+
+;;;; ___________________________________________________________________________
 ;;;; move-ns-tree
 
 (defn move-ns-tree
