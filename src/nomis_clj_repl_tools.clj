@@ -53,11 +53,14 @@
                               (.getMessage e))))))))
 
 ;;;; ___________________________________________________________________________
-;;;; move-ns-dev-src-test
-;;;; move-ns-tree-dev-src-test
+;;;; move-ns-++
+;;;; move-ns-tree-++
 
-(defn move-ns-dev-src-test [old-sym new-sym source-path]
-  (ctnm/move-ns old-sym new-sym source-path ["dev" "src" "test"]))
+(def often-used-src-and-test-dirs
+  ["dev" "src" "test" "src/clj" "test/clj"])
 
-(defn move-ns-tree-dev-src-test [old-sym new-sym source-path]
-  (move-ns-tree old-sym new-sym source-path ["dev" "src" "test"]))
+(defn move-ns-++ [old-sym new-sym source-path]
+  (ctnm/move-ns old-sym new-sym source-path often-used-src-and-test-dirs))
+
+(defn move-ns-tree-++ [old-sym new-sym source-path]
+  (move-ns-tree old-sym new-sym source-path often-used-src-and-test-dirs))
