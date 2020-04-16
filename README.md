@@ -2,9 +2,7 @@
 
 Clojure REPL tools.
 
-**This documentation tracks the `master` branch. Consult
-the relevant Git tag (e.g. `0.1.2`) if you need documentation for a
-specific release.**
+**This documentation tracks the `master` branch. Consult the relevant Git tag (e.g. `0.1.2`) if you need documentation for a specific release.**
 
 
 ## Installation
@@ -22,24 +20,19 @@ A function that returns the classpath as a sequence of strings.
 
 ### move-ns-tree
 
-A function that moves a namespace tree (that is, a Clojure code directory).
-This entails renaming the directory and adjusting mentions of namespaces in
-source files.
+A function that moves a namespace tree (that is, a Clojure code directory). This is done by calling `clojure.tools.namespace.move/move-ns` for all namespaces in the directory and its subdirectories.
 
-### move-ns-dev-src-test
+### move-ns-++
 
-A function that calls `clojure.tools.namespace.move/move-ns` with a `source-path`
-arg of `["dev" "src" "test"]`.
+A function that calls `clojure.tools.namespace.move/move-ns` with a `source-path` arg of `["dev" "src" "test" "src/clj" "test/clj"]`.
 
-### move-ns-tree-dev-src-test
+### move-ns-tree-++
 
-A function that calls `move-ns-tree` with a `source-path`
-arg of `["dev" "src" "test"]`.
+A function that calls `move-ns-tree` with a `source-path` arg of `["dev" "src" "test" "src/clj" "test/clj"]`.
 
 
 ## License
 
-Copyright © 2018-2019 Simon Katz
+Copyright © 2018-2020 Simon Katz
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.

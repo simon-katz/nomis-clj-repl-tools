@@ -2,23 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
-This changelog mostly follows the conventions of
-[Keep a Changelog](http://keepachangelog.com/en/1.0.0/); it deviates from those
-conventions by not making versions and sections linkable.
+This changelog mostly follows the conventions of [Keep a Changelog](http://keepachangelog.com/en/1.0.0/); it deviates from those conventions by not making versions and sections linkable.
 
-This project uses [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-In addition, breaking changes between successive
-initial development versions (that is 0.y.z versions)
-are explicitly noted.
+This project uses [Semantic Versioning](http://semver.org/spec/v2.0.0.html). In addition, breaking changes between successive initial development versions (that is 0.y.z versions) are explicitly noted.
 
 
 ## Unreleased
 
 ### Added
 
-- Add `ns-names` and `ns-names--no-sort`.
-- Add `ns-names-matching-re` and `ns-names-matching-re--no-sort`.
+- Add `ns-names`.
+- Add `ns-names-matching-re`.
+
+### Changed
+
 - Upgrade to org.clojure/tools.namespace 1.0.0.
+- Rename `move-ns-dev-src-test` -> `move-ns-++`, and change files in `src/clj` and `test/clj` directories in addition to the previous `src`, `test` and `dev`.
+- Rename `move-ns-tree-dev-src-test` -> `move-ns-tree-++`, and change files in `src/clj` and `test/clj` directories in addition to the previous `src`, `test` and `dev`.
 
 ### Diffs
 
