@@ -18,6 +18,14 @@ Current version:
 
 A function that returns the classpath as a sequence of strings.
 
+### ns-names
+
+A function that returns s sequence of all ns names.
+
+### ns-names-matching-re
+
+A function that returns s sequence of all ns names matching a regex.
+
 ### move-ns-tree
 
 A function that moves a namespace tree (that is, a Clojure code directory). This is done by calling `clojure.tools.namespace.move/move-ns` for all namespaces in the directory and its subdirectories.
