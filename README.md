@@ -38,9 +38,10 @@ A function that calls `clojure.tools.namespace.move/move-ns` with a `source-path
 
 A function that calls `move-ns-tree` with a `source-path` arg of `["dev" "src" "test" "src/clj" "test/clj"]`.
 
+### Uptime functions — `uptime-ms`, `uptime-seconds` and `uptime-string`.
 
 ## License
 
-Copyright © 2018-2020 Simon Katz
+Copyright © 2018-2025 Simon Katz
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.

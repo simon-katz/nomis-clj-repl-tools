@@ -1,5 +1,6 @@
 (ns nomis-clj-repl-tools
-  (:require [clojure.string :as str]
+  (:require [clojure.pprint :as pp]
+            [clojure.string :as str]
             [clojure.tools.namespace.move :as ctnm]))
 
 ;;;; ___________________________________________________________________________
@@ -63,3 +64,33 @@
 
 (defn move-ns-tree-++ [old-sym new-sym source-path]
   (move-ns-tree old-sym new-sym source-path often-used-src-and-test-dirs))
+
+;;;; ___________________________________________________________________________
+;;;; Uptime
+
+(defn uptime-ms []
+  (-> (java.lang.management.ManagementFactory/getRuntimeMXBean)
+      .getUptime))
+
+(defn uptime-seconds []
+  (-> (uptime-ms)
+      (/ 1000)
+      float))
+
+(defn uptime-string []
+  (let [total-ms        (uptime-ms)
+        total-seconds   (-> total-ms (/ 1000) float)
+        d               (Math/floor (/ total-seconds (* 24 3600)))
+        h               (Math/floor (/ total-seconds 3600))
+        m               (Math/floor (/ total-seconds 60))
+        s-within-minute (rem total-seconds 60)
+        s               (Math/floor s-within-minute)
+        ms              (rem total-ms 1000)]
+    (pp/cl-format nil "~d days ~2,'0d:~2,'0d:~2,'0d.~3,'0d"
+                  d h m s ms)))
+
+(comment
+  [(uptime-ms)
+   (uptime-seconds)
+   (uptime-string)]
+  (uptime-string))
