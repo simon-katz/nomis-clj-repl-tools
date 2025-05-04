@@ -7,7 +7,7 @@ This changelog mostly follows the conventions of [Keep a Changelog](http://keepa
 This project uses [Semantic Versioning](http://semver.org/spec/v2.0.0.html). In addition, breaking changes between successive initial development versions (that is 0.y.z versions) are explicitly noted.
 
 
-## Unreleased
+## 0.1.6 - 2025-05-04
 
 ### Added
 
@@ -15,7 +15,7 @@ This project uses [Semantic Versioning](http://semver.org/spec/v2.0.0.html). In 
 
 ### Diffs
 
-https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.5...HEAD
+https://github.com/simon-katz/nomis-clj-repl-tools/compare/0.1.5...0.1.6
 
 
 ## 0.1.5 - 2020-06-05
