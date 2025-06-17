@@ -11,7 +11,7 @@ This project uses [Semantic Versioning](http://semver.org/spec/v2.0.0.html). In 
 
 ### Added
 
-- (nothing)
+- Fix `uptime-string`.
 
 ### Diffs
 

@@ -77,20 +77,25 @@
       (/ 1000)
       float))
 
-(defn uptime-string []
-  (let [total-ms        (uptime-ms)
-        total-seconds   (-> total-ms (/ 1000) float)
-        d               (Math/floor (/ total-seconds (* 24 3600)))
-        h               (Math/floor (/ total-seconds 3600))
-        m               (Math/floor (/ total-seconds 60))
-        s-within-minute (rem total-seconds 60)
-        s               (Math/floor s-within-minute)
-        ms              (rem total-ms 1000)]
+(defn ^:private quot-rem [n d] [(quot n d) (rem  n d)])
+
+(def ^:private ms-in-s 1000)
+(def ^:private ms-in-m (* ms-in-s 60))
+(def ^:private ms-in-h (* ms-in-m 60))
+(def ^:private ms-in-d (* ms-in-h 24))
+
+(defn ms->string [ms]
+  (let [[d spare-ms] (quot-rem ms ms-in-d)
+        [h spare-ms] (quot-rem spare-ms ms-in-h)
+        [m spare-ms] (quot-rem spare-ms ms-in-m)
+        [s spare-ms] (quot-rem spare-ms ms-in-s)]
     (pp/cl-format nil "~d days ~2,'0d:~2,'0d:~2,'0d.~3,'0d"
-                  d h m s ms)))
+                  d h m s spare-ms)))
+
+(defn uptime-string []
+  (ms->string (uptime-ms)))
 
 (comment
   [(uptime-ms)
    (uptime-seconds)
-   (uptime-string)]
-  (uptime-string))
+   (uptime-string)])
